@@ -117,3 +117,20 @@ undefined
 
 
 `npm config set ignore-scipts=true`
+
+
+This setting will alter the behavior of installed packages.
+'vue-demi' is dependent on running a post-install script after installing the package into the project.
+We first noticed this in our pipeline; finding this setting that altered the behavior was challenging.
+
+```json
+  "scripts": {
+    "postinstall": "node -e \"try{require('./scripts/postinstall.js')}catch(e){}\"",
+    "release": "npx bumpp --tag --commit --push && npm publish"
+  }
+```
+
+Other strange error messages I have had issues with because of vue-demi is missing `hasInjectionContext`.
+
+This also comes from the post-install script.
+`export declare function hasInjectionContext(): boolean`
