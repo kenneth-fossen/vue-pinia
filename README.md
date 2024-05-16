@@ -113,3 +113,7 @@ undefined
    Duration  307ms (transform 27ms, setup 0ms, collect 62ms, tests 5ms, environment 0ms, prepare 81ms)
 ```
 
+## Culporate
+
+
+`npm config set ignore-scipts=true`

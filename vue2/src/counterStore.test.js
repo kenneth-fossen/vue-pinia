@@ -9,13 +9,13 @@ describe("Counter Store test", () => {
         setActivePinia(pinia);
     })
 
-    test("Initial Store Vue2", () => {
+    test("Initial Store n.value", () => {
         const store = useCounterStore();
         
         expect(store.n.value).toBe(0);
     })
 
-    test("Initial Store Vue3", () => {
+    test("Initial Store n", () => {
         const store = useCounterStore();
         
         expect(store.n).toBe(0);
