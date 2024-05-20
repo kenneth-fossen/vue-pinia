@@ -120,7 +120,7 @@ undefined
 
 
 This setting will alter the behavior of installed packages.
-'vue-demi' is dependent on running a post-install script after installing the package into the project.
+'vue-demi' depends on running a post-install script after installing the package into the project.
 We first noticed this in our pipeline; finding this setting that altered the behavior was challenging.
 
 ```json
